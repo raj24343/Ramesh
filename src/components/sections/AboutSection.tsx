@@ -16,9 +16,9 @@ export function AboutSection() {
         </div>
         <div className="about-content">
           <p className="section-kicker">{t("about.kicker")}</p>
-          <h2>{t("about.title")}</h2>
-          <p>{t("about.body1")}</p>
-          <p>{t("about.body2")}</p>
+          <h1>{t("Founder of RS Solutions | Bridging Custom Services & Scalable SaaS")}</h1>
+          <p>{t("I am a founder, operator, and product strategist focused on building scalable technology solutions that solve real-world operational challenges. As the founder of RS Solutions, I lead a hybrid technology company that delivers both custom digital services and scalable SaaS products. My work sits at the intersection of execution and innovation, helping organizations streamline operations through tailored solutions while simultaneously building products that scale efficiently across institutions.")}</p>
+          
         </div>
       </section>
 

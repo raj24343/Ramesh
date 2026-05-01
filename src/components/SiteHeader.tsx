@@ -62,9 +62,7 @@ export function SiteHeader() {
           <button className="mode-toggle" onClick={toggleTheme} aria-label="Toggle color mode">
             {theme === "dark" ? t("theme.light") : t("theme.dark")}
           </button>
-          <Link className="btn btn-primary" href="/contact">
-            {t("header.bookDemo")}
-          </Link>
+          
         </div>
       </div>
     </header>
