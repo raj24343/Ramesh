@@ -23,7 +23,7 @@ export function TrustSection() {
       setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 6000);
     return () => window.clearInterval(slider);
-  }, []);
+  }, [testimonials.length]);
 
   const activeReview = testimonials[activeTestimonial];
 

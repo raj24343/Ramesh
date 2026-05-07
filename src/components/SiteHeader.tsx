@@ -5,7 +5,11 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "./LanguageProvider";
 
 export function SiteHeader() {
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [theme, setTheme] = useState<"dark" | "light">(() => {
+    if (typeof window === "undefined") return "dark";
+    const savedTheme = localStorage.getItem("site-theme");
+    return savedTheme === "light" ? "light" : "dark";
+  });
   const { language, setLanguage, t } = useLanguage();
 
   const navItems = [
@@ -17,14 +21,8 @@ export function SiteHeader() {
   ];
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("site-theme");
-    if (savedTheme === "dark" || savedTheme === "light") {
-      setTheme(savedTheme);
-      document.documentElement.dataset.theme = savedTheme;
-      return;
-    }
-    document.documentElement.dataset.theme = "dark";
-  }, []);
+    document.documentElement.dataset.theme = theme;
+  }, [theme]);
 
   const toggleTheme = () => {
     const nextTheme = theme === "dark" ? "light" : "dark";

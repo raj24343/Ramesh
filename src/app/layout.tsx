@@ -14,16 +14,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ramesh Raj | Founder & CEO, RS Solutions",
+  title: "Ramesh — Founder, Product Strategist & SaaS Builder",
   description:
-    "Premium founder brand website showcasing RS Solutions, a software development company.",
-  keywords: [
-    "Founder CEO",
-    "Software Development Company",
-    "Software Development",
-    "Software Development Services",
-    "Software Development Company",
-  ],
+    "Founder building scalable SaaS systems, ERP platforms, operational tools, and startup-focused digital products.",
+  openGraph: {
+    title: "Ramesh — Founder, Product Strategist & SaaS Builder",
+    description:
+      "Founder building scalable SaaS systems, ERP platforms, operational tools, and startup-focused digital products.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -37,7 +36,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       data-scroll-behavior="smooth"
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full bg-background text-foreground">
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

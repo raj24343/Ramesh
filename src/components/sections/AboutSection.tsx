@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/components/LanguageProvider";
 
 export function AboutSection() {
@@ -11,7 +12,7 @@ export function AboutSection() {
       <section className="section container section-shell about-grid">
         <div className="about-photo-wrap">
           <div className="founder-photo">
-            <img src="/founder.jpeg" alt="Ramesh Raj" />
+            <Image src="/founder.jpeg" alt="Ramesh Raj" width={340} height={330} />
           </div>
         </div>
         <div className="about-content">
